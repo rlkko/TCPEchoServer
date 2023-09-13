@@ -33,6 +33,7 @@ public class newFile {
 
         //create server socket
         final ServerSocket server = new ServerSocket(TELNET_PORT);
+        //Instance the ThreadPool class with 5 fixed threads to be used by client connections
         final ExecutorService executorService = Executors.newFixedThreadPool(5);
 
         final PipedInputStream pipedInputStream = new PipedInputStream();
